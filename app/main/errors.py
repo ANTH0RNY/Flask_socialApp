@@ -9,4 +9,4 @@ def error_404(e):
 @main.app_errorhandler(500)
 def error_500(e):
     flash('Something went wrong 🙇')
-    return render_template('main/index.html'), 500
+    return render_template('main/index.html')

@@ -2,6 +2,7 @@ from flask import blueprints, Flask
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 from config import config
 
@@ -14,6 +15,7 @@ def create_app(config_name = 'default'):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
+    Migrate(app, db)
     bootstrap.init_app(app)
     moment.init_app(app)
     db.init_app(app)

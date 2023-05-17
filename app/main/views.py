@@ -5,4 +5,4 @@ from .. import db
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    return 'Hello World'
+    return render_template('main/index.html')
