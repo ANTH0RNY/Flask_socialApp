@@ -18,9 +18,9 @@ def login():
         login_user(user, form.remember_me.data)
         next = request.args.get('next')
 
-        if next or next.startswith('/'):
-            return redirect(next)
-        return redirect(url_for('main.index'))
+        if next is None or not next.startswith('/'):
+            return redirect(url_for('main.index'))
+        return redirect(next)
     return render_template('auth/login.html', form=form)
 
 @auth.route('/logout')

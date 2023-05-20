@@ -33,10 +33,10 @@
           </li> -->
         </ul>
         <div class="navbar-nav ms-auto">
-          {% if current_user.is_authentcated %}
-          <a href="{{ url_for('auth.login')}}" class="btn btn-outline-warning">Log out</a>
+          {% if current_user.is_authenticated %}
+          <a href="{{ url_for('auth.logout')}}" class="btn btn-outline-danger my-2 mx-3">Log out</a>
           {% else %}
-          <a href="{{url_for('auth.logout')}}" class="btn btn-outline-success my-2 mx-3">Log in</a>
+          <a href="{{url_for('auth.login')}}" class="btn btn-outline-success my-2 mx-3">Log in</a>
           {% endif %}
         </div>
         <form class="d-flex" role="search">
