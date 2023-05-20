@@ -1,0 +1,14 @@
+.form-group{
+    margin: 2rem 0;
+    width: 25rem;
+}
+.form{
+    /* border: solid 1px black; */
+    max-width: 30rem;
+    padding: 2rem;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
