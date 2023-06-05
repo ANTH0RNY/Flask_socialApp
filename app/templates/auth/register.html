@@ -3,6 +3,9 @@
 {% block body %}
 <div class="flex my-4">
     <div class="form shadow-lg rounded border-success-subtle">
+        <h2 class="h2 text-body-heading">
+            Register
+        </h2>
         <form action="{{url_for('auth.register')}}" method="post">
            <div class="form-group">
                {{

@@ -7,6 +7,9 @@ Login
 <div class="flex my-4 bg-light-subtle">
 
     <div class="form shadow-lg rounded border-success-subtle">
+        <h3>
+            No account <a href="{{url_for('auth.register')}}" class="btn btn-outline-success">Register</a>
+        </h3>
         <form action="{{url_for('auth.login')}}" method="post">
            <div class="form-group">
                {{
